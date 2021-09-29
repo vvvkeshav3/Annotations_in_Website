@@ -1,0 +1,53 @@
+h1{
+    text-align : center;
+}
+
+main{
+    width : 60%;
+    margin : auto;
+}
+p{
+    font-size : 1.2rem;
+}
+.tooltip {
+  position: relative;
+  border-bottom: 2px dashed rgb(56, 56, 241);
+  color: rgb(56, 56, 241);
+}
+
+.tooltip:before {
+  content: attr(data-text);
+  position: absolute;
+  /* top: 50%; */
+  /* transform: tranlateY(-50%); */
+  z-index: 1;
+  left: 15%;
+  /* transform: translateX(-50%); */
+  margin-top: 5px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgb(39, 38, 38);
+  color: white;
+  text-align: center;
+  display: none;
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after {
+  display: block;
+}
+
+/* Adding Arrows */
+.tooltip:after {
+  content: '';
+  position: absolute;
+  left: 20%;
+  /* left: 100%; */
+  /* transform: translateX(-50%); */
+  margin-top: -10px;
+  border: 10px solid rgb(39, 38, 38);
+  border-color: transparent transparent rgb(39, 38, 38) transparent;
+  display: none;
+  z-index : 1;
+}
